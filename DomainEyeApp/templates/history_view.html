@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titre %}DomainEye App | Historique{% endblock titre %}
+{% block content %}
+<br><br><br>
+<div class="container-fluid">
+    <center>
+        <table class="table w-75 table-hover">
+            <thead>
+              <tr>
+                
+                <th scope="col">Domain</th>
+                <th scope="col">DateTime</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for h in history  %}
+              <tr>
+                
+                <td>{{h.domain}}</td>
+                <td>{{h.temps}}</td>
+                <td>
+                    <form action="{% url 'data_url' %}">
+                       
+                        <input type="text" hidden name="search_history"  value="{{h.domain}}">
+                        <button type="submit" class="btn btn-outline-success" >Review</button>
+                    </form>
+                </td>
+              </tr>
+           
+              {% endfor %}
+            </tbody>
+          </table>
+    </center>
+</div>
+{% endblock content %}

@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titre %}DomainEye APP | Info{% endblock titre %}
+
+{% block content %}
+    <div class="container-fluid">
+        <br><br><br>
+        <center>
+    <table class="table table-striped mt-6 w-75 ">
+        <thead>
+          <tr>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bold h4 ">Registrar Informations</td>
+            <td></td>
+          </tr>
+          <tr class="fs-4" style="background-color: ;">
+            <td>
+                
+                <div>Domain Name</div>                               
+                <div>Name</div>
+                <div>Whois Server</div>
+                <div>URL</div>
+                <div>Status</div>
+            </td>
+            <td>
+                <div>{{domain_name.1}}<div>
+               <div>{{registrar}}</div>
+               <div>{{whois_server}}</div>
+               <div>{{referral_url}}</div>
+               <div>{{status}}</div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="bold h4">Important Dates</td>
+            <td></td>
+          </tr>
+          <tr class="fs-4" style="background-color: ;">
+            <td>
+                <div>Created On</div>
+                <div>Updated On</div>
+                <div>Expires On</div>
+                
+            </td>
+            <td>
+                <div>{{creation_date.0}}</div>
+                <div>{{updated_date.0}}</div>
+                <div>{{expiration_date.0}}</div>
+                
+                
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="bold h4">Name servers</td>
+            <td></td>
+          </tr>
+          <tr class="fs-4" style="background-color: ;">
+            <td>
+                <div>Name Server 1</div>
+                <div>Name Server 2</div>
+                
+            </td>
+            <td>
+                <div>{{name_servers.0}}</div>
+                <div>{{name_servers.1}}</div>
+                
+                
+            </td>
+          </tr>
+          
+          
+         
+            <td class="bold h4 w-50">Registrar Data</td>
+            <td></td>
+          </tr>
+          <tr class="" style="background-color: ;">
+            <td>
+                <div class="bold fs-4">Registrant Contact Information :</div>
+                <div class="me-5 mt-1">
+                    <table class="table table-borderless me-5 fs-5">
+                        
+                        <tr>
+                            <td>Name</td>
+                            <td>{{name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Organization</td>
+                            <td>{{org}}</td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>{{city}}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>State</td>
+                            <td>{{state}}</td>
+                        </tr>
+                        <tr>
+                            <td>Postal Code</td>
+                            <td>{{registrant_postal_code}}</td>
+                        </tr>
+                        <tr>
+                            <td>Country</td>
+                            <td>{{country}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>{{address.1}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>{{emails}}</td>
+                        </tr>
+                    </table>
+                </div>
+                
+
+                
+                
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          
+          
+        </tbody>
+      </table>
+    </div>
+</center>
+{% endblock content %}

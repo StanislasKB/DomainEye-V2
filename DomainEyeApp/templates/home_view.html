@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titre %}DomainEye App{% endblock titre %}
+
+        <!--PRELOADER START-->
+        <div class="preloader">
+            <div class="loader">
+                <img src="{% static 'images/loader.gif' %}" alt="">
+            </div>
+        </div>
+        <!--PRELOADER END-->
+        {% block content %}
+       
+       
+        <!--SLIDER START-->
+        <section class="slider pb-0 " id="slider">
+            <div class="tp-banner">
+                <ul>
+                    <li data-transition="cube" data-slotamount="7" data-masterspeed="1000">
+                        <img src="{% static 'images/slider/whois.jpg' %}"  alt=""> 
+                        <div class="tp-caption sfb"
+                             data-x="center"
+                             data-y="center"
+                             data-hoffset="0"
+                             data-voffset="-40"
+                             data-speed="1600"
+                             data-start="1000"
+                             data-easing="easeInOutCubic">
+                            <div class="revCon">
+                                <h5 class="text-uppercase text-dark">we do nothing less than perfect</h5>
+                            </div>
+                        </div>
+                        <div class="tp-caption sfb"
+                             data-x="center"
+                             data-y="center"
+                             data-hoffset="0"
+                             data-voffset="35"
+                             data-speed="2000"
+                             data-start="1500"
+                             data-easing="Power4.easeOut">
+                            <div class="revCon">
+                                <h2 class="lead text-dark">Adventure starts here.</h2>
+                            </div>
+                        </div>
+                        <div class="tp-caption sfb"
+                             data-x="center"
+                             data-y="center"
+                             data-hoffset="0"
+                             data-voffset="148"
+                             data-speed="2000"
+                             data-start="2000"
+                             data-easing="Power4.easeOut">
+                            <div class="revCon revBtn">
+                                <div class="container-fluid pb-0">
+                                    <form class="d-flex" role="search" action="{% url 'data_url' %}" method="post">
+                                       {% csrf_token %}
+                                      <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search" name='search'>
+                                      <button class="btn btn-danger" type="submit">Search</button>
+                                    </form>
+                                  </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                   
+                </ul>
+                
+            </div>
+            
+        </section>
+        <!--SLIDER END-->
+
+       
+
+        {% endblock content %}
